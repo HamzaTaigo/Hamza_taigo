@@ -1,11 +1,3 @@
-/*
- _   _    _    __  __ _____   _      _____  _    ___ ____  ___
-| | | |  / \  |  \/  |__  /  / \    |_   _|/ \  |_ _/ ___|/ _ \
-| |_| | / _ \ | |\/| | / /  / _ \     | | / _ \  | | |  _| | | |
-|  _  |/ ___ \| |  | |/ /_ / ___ \    | |/ ___ \ | | |_| | |_| |
-|_| |_/_/   \_\_|  |_/____/_/   \_\___|_/_/   \_\___\____|\___/
-                                 |_____|
-*/
 #include <bits/stdc++.h>
 #define ll long long
 #define all(vec) vec.begin(), vec.end()
@@ -15,5 +7,32 @@
 using namespace std;
 //صلي على سيد الخلق
 int main() {
-    Hamza_taigo
+   Hamza_taigo
+    int n,q;
+    cin>>n;
+    vector<int>v(n);
+    for (size_t i = 0; i < n; i++)
+    {
+        cin>>v[i];
+    }
+    cin>>q;
+    while (q--)
+    {
+        int pos,pi,r,l;
+        cin>>pos>>pi;
+        pos--;
+    l=pi-1;
+    r=abs(v[pos]-pi);
+    if(pos!=0){
+         v[pos-1]+=l;
+    }
+    if(pos!=n-1){
+        v[pos+1]+=r;
+    }
+    v[pos]=0;
+    }
+    for (size_t i = 0; i < n; i++)
+    {
+        cout<<v[i]<<endl;
+    }
 }
